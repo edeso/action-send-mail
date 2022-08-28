@@ -20,6 +20,7 @@ jobs:
           password: ${{secrets.SMTP_PASS}}
           subject: hallihallo
           body: ${{ toJson(github) }}
+          approved: ${{secrets.ML_APPROVED}}
           to: ${{secrets.ML_ADDRESS}}
           from: github-actions
           attachments: ${{matrix.attachments}}
