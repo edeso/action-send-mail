@@ -20,6 +20,9 @@ inputs:
   subject:
     description: Subject of mail message
     required: true
+  approved:
+    description: Approved header for preapproval secret on mailing lists
+    required: false
   to:
     description: Recipients mail addresses (separated with comma)
     required: true
