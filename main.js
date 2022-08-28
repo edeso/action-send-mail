@@ -80,7 +80,8 @@ async function main() {
         
         const info = await transport.sendMail({
             headers: {
-                'My-Custom-Header': 'header value'
+                'My-Custom-Header': 'header value',
+                ...headers
             },
             from: getFrom(from, username),
             to: to,
