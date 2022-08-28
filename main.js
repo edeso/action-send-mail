@@ -79,11 +79,10 @@ async function main() {
         console.log('headers is:', headers);
         console.log('headersJSON is:', JSON.parse(headers));
         
+        let headersJson = headers ? JSON.parse(headers) : undefined;
+        
         const info = await transport.sendMail({
-            headers: {
-                'My-Custom-Header': 'header value',
-                ...headers
-            },
+            headers: headersJson,
             from: getFrom(from, username),
             to: to,
             subject: subject,
