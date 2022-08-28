@@ -41,6 +41,8 @@ jobs:
             body: file://README.md
             html_body: file://README.md
     steps:
+      - run: echo "Print all environment variables"
+      - run: env
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Send mail
