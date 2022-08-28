@@ -22,7 +22,7 @@ jobs:
              { "Approved":"${{secrets.ML_APPROVED}}", "X-Approved":"${{secrets.ML_APPROVED}}",
               "Approve":"${{secrets.ML_APPROVED}}", "X-Approve":"${{secrets.ML_APPROVED}}"}
           subject: just a test
-          body: please ignore
+          body: please ignore ..ede
           to: ${{secrets.ML_ADDRESS}}
           from: github-actions
           attachments: ${{matrix.attachments}}
