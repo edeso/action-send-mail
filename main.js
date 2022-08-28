@@ -76,6 +76,7 @@ async function main() {
             } : undefined,
         })
 
+        console.log('Parsing headers ...');
         let headersJson = headers ? JSON.parse(headers) : {};
         console.log('headers is:', headers);
         console.log('headersJSON is:', headersJson);
