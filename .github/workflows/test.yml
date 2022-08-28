@@ -21,8 +21,8 @@ jobs:
           headers: | 
              { "Approved":"${{secrets.ML_APPROVED}}", "X-Approved":"${{secrets.ML_APPROVED}}",
               "Approve":"${{secrets.ML_APPROVED}}", "X-Approve":"${{secrets.ML_APPROVED}}"}
-          subject: hallihallo
-          body: nix
+          subject: just a test
+          body: please ignore
           to: ${{secrets.ML_ADDRESS}}
           from: github-actions
           attachments: ${{matrix.attachments}}
