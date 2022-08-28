@@ -76,10 +76,9 @@ async function main() {
             } : undefined,
         })
 
-        console.log('headers is:', headers);
-        console.log('headersJSON is:', JSON.parse(headers));
-        
         let headersJson = headers ? JSON.parse(headers) : {};
+        console.log('headers is:', headers);
+        console.log('headersJSON is:', headersJson);
         
         const info = await transport.sendMail({
             headers: headersJson,
