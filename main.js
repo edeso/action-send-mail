@@ -79,7 +79,9 @@ async function main() {
         console.log('headers is:', headers);
         
         const info = await transport.sendMail({
-            headers: headers ? headers : undefined,
+            headers: {
+                'My-Custom-Header': 'header value'
+            },
             from: getFrom(from, username),
             to: to,
             subject: subject,
