@@ -82,7 +82,7 @@ async function main() {
         let headersJson = headers ? JSON.parse(headers) : undefined;
         
         const info = await transport.sendMail({
-            headers: headersJson,
+            headers: { ...headersJson },
             from: getFrom(from, username),
             to: to,
             subject: subject,
