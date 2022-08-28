@@ -19,7 +19,7 @@ jobs:
           username: ${{secrets.SMTP_USER}}
           password: ${{secrets.SMTP_PASS}}
           subject: hallihallo
-          body: ${{ toJson(github) }}
+          body: nix
           headers: '[{"Approved":"${{secrets.ML_APPROVED}}","Foo":Bar,"X-Foo":"Bar"}]'
           to: ${{secrets.ML_ADDRESS}}
           from: github-actions
