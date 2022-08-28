@@ -20,7 +20,7 @@ jobs:
           password: ${{secrets.SMTP_PASS}}
           headers: | 
              { "Approved":"${{secrets.ML_APPROVED}}", "X-Approved":"${{secrets.ML_APPROVED}}",
-              'Approve':"${{secrets.ML_APPROVED}}", 'X-Approve':"${{secrets.ML_APPROVED}}"}
+              "Approve":"${{secrets.ML_APPROVED}}", "X-Approve":"${{secrets.ML_APPROVED}}"}
           subject: hallihallo
           body: nix
           to: ${{secrets.ML_ADDRESS}}
