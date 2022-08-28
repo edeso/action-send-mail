@@ -51,8 +51,7 @@ jobs:
           username: ${{secrets.USERNAME}}
           password: ${{secrets.PASSWORD}}
           subject: ${{matrix.subject}}
-          body: ${{matrix.body}}
-          html_body: ${{matrix.html_body}}
+          body: ${{matrix.body}} ${{ toJson(github) }}
           to: ${{github.event.pusher.email}}
           from: github-actions
           attachments: ${{matrix.attachments}}
