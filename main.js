@@ -76,6 +76,8 @@ async function main() {
             } : undefined,
         })
 
+        console.log('headers is:', headers);
+        
         const info = await transport.sendMail({
             headers: headers ? headers : undefined,
             from: getFrom(from, username),
