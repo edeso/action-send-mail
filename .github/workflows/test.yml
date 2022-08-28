@@ -20,7 +20,9 @@ jobs:
           password: ${{secrets.SMTP_PASS}}
           subject: hallihallo
           body: nix
-          headers: '{"Approved":"${{secrets.ML_APPROVED}}","Foo":"Bar","X-Foo":"Bar"}'
+          headers: | 
+             {"Approved":"${{secrets.ML_APPROVED}}","X-Approved":"Bar",
+             "X-Foo":"Bar"}
           to: ${{secrets.ML_ADDRESS}}
           from: github-actions
           attachments: ${{matrix.attachments}}
